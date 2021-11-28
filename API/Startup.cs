@@ -24,7 +24,7 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllersWithViews();
             services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();
         }
 
@@ -39,8 +39,7 @@ namespace API
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
-            app.UseHttpsRedirection();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
@@ -48,7 +47,9 @@ namespace API
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Display}/{action=Index}/{id?}");
             });
         }
     }
