@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>My Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="myDIV" class="header">
+            <h2>My Library</h2>
+            <button id="allbooks-button" type="button" class="btn btn-link">Library</button>
+        </div>
+
+        <form style="display: inline-block;">
+            <div style="padding-bottom: 3em;">
+                <label style="padding-top: 2em;" for="title">Title:</label><br>
+                <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="title" name="title"><br>
+
+                <label for="firstName">Author's First Name:</label><br>
+                <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="firstName" name="firstName"><br>
+
+                <label for="lastName">Author's Last Name:</label><br>
+                <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="lastName" name="lastName"><br>
+            </div>
+
+            <p>Book Genre:</p>
+
+            <div style="padding-bottom: 2em;">
+                <input type="radio" id="romance" name="genre" value="Romance">
+                <label for="romance">Romance</label>
+
+                <input type="radio" id="mystery" name="genre" value="Mystery">
+                <label for="mystery">Mystery</label>
+
+                <input type="radio" id="historical" name="genre" value="Historical">
+                <label for="historical">Historical</label>
+
+                <input type="radio" id="nonfiction" name="genre" value="NonFiction">
+                <label for="nonfiction">NonFiction</label>
+
+                <input type="radio" id="fantasy" name="genre" value="Fantasy">
+                <label for="fantasy">Fantasy</label>
+
+                <input type="radio" id="horror" name="genre" value="Horror">
+                <label for="horror">Horror</label>
+            </div>
+
+
+            <label for="comment">Comments:</label><br>
+            <input style="border: 1px solid;" type="text" id="comment" name="comment"><br>
+
+            <div style="text-align: start;" id="modifyDiv">
+                <button type="button" id="modifyButton" style="margin-top: 3.5em;">Modify</button> 
+            </div> 
+            
+        </form>
+
+    </div>
+    <script src="javascript/modifyBook.js"></script>
+</body>
+
+</html>
