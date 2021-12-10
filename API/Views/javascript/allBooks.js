@@ -8,7 +8,6 @@ fetch('http://localhost:5000/api/display/books', {
     .then(data => populateLibrary(data));
 
     function populateLibrary(Books) {
-        // iterate over todoitems and call addItem
         Books.forEach(book => addBook(book));
     }
 
