@@ -9,8 +9,11 @@ namespace API.Models.Entities
     {
         public Guid Id {get; set;}
         public string Title {get; set;}
-        public List<Author> Author {get; set;}
+        public Author Author {get; set;}
         public Genre Genre {get; set;}
-        public int PageNumber {get; set;}
+        public int CurrentPage {get; set;}
+        public int TotalPages {get; set;}
+        public bool IsBookComplete {get ;set;}
+        public string Comments {get; set;}
     }
 }

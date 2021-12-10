@@ -42,7 +42,7 @@ namespace API.Models.Entities
         {
             return EnumExtensions.GetValueFromEnumMember<T>(reader.Value.ToString());
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             return null;
         }
