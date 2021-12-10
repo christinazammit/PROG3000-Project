@@ -59,5 +59,39 @@ namespace API.Controllers
 
             return Ok(books);
         }
+
+        [HttpGet("completed")] // api/display/completed
+        public IActionResult GetAllCompletedBooks()
+        {
+            List<Book> books = new List<Book>();
+
+            foreach (var book in _context.Books.Include(x => x.Author).Where(x => x.IsBookComplete.Equals(true)))
+            {
+                var gotBook = new Book {
+                    Id = book.Id,
+                    Title = book.Title,
+                    Author = new Author {
+                        FirstName = book.Author.FirstName,
+                        LastName = book.Author.LastName,
+                    },
+                    Genre = book.Genre,
+                    CurrentPage = book.CurrentPage,
+                    TotalPages = book.TotalPages,
+                    IsBookComplete = book.IsBookComplete,
+                    Comments = book.Comments,
+                };
+
+                books.Add(gotBook);
+            }
+
+            if (!books.Any())
+            {
+                return Content("You have no completed books");
+            }
+            else 
+            {
+                return Ok(books);
+            }
+        }
     }
 }
