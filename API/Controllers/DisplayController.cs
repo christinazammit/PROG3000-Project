@@ -26,29 +26,6 @@ namespace API.Controllers
         {
             return View();
         }
-
-        // add a book, CHANPREETS PART
-        [HttpPost("add")] // api/display/add
-        public async Task<IActionResult> AddBook([FromBody] Book book)
-        {
-            var newBook = new Book {
-                Id = Guid.NewGuid(),
-                Title = book.Title,
-                Author = new Author {
-                    FirstName = book.Author.FirstName,
-                    LastName = book.Author.LastName,
-                },
-                Genre = book.Genre,
-                CurrentPage = book.CurrentPage,
-                TotalPages = book.TotalPages,
-                IsBookComplete = book.IsBookComplete,
-                Comments = book.Comments,
-            };
-
-            await _context.Books.AddAsync(newBook);
-            await _context.SaveChangesAsync();
-            return Ok(newBook);
-        }
         
         [HttpGet]
         public IActionResult Index()
