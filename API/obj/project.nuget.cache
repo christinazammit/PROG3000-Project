@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hd05/Z8Y9DRVJIJyIu9vV3IE9Uzh9YPvksxuSWq1SbcaNSjJ+B8Ea8vXZgIVDBJDxuUyJ0kAS1HsTK5sVTy7mw==",
+  "dgSpecHash": "pAMMXREXHkzIvWSqAexS+LcXbUppSZmFRmpsgTDbFrbBA03JuGvobtdv8y6r7nef1mHlcVpUtTrNoDpRPzJUWA==",
   "success": true,
-  "projectFilePath": "/Users/christinazammit/Desktop/PROG30000/Project/PROG3000Project/API/API.csproj",
+  "projectFilePath": "/Users/christinazammit/Documents/PROG30000/Project/PROG3000Project/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/christinazammit/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
+    "/Users/christinazammit/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.12/microsoft.aspnetcore.jsonpatch.5.0.12.nupkg.sha512",
+    "/Users/christinazammit/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/5.0.12/microsoft.aspnetcore.mvc.newtonsoftjson.5.0.12.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/microsoft.data.sqlite.core/5.0.12/microsoft.data.sqlite.core.5.0.12.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
@@ -25,6 +27,8 @@
     "/Users/christinazammit/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/microsoft.extensions.options/5.0.0/microsoft.extensions.options.5.0.0.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "/Users/christinazammit/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/christinazammit/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.4/sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
     "/Users/christinazammit/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",
