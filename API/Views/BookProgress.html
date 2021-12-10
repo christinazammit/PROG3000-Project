@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>My Library</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="myDIV" class="header">
+            <h2>My Library</h2>
+            <button id="allbooks-button" type="button" class="btn btn-link">Library</button>
+        </div>
+
+        <form style="display: inline-block;">
+            <div style="padding-bottom: 3em;">
+                <label style="padding-top: 2em;" for="currentPage">Current Page:</label><br>
+                <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="currentPage" name="currentPage"><br>
+            </div>
+
+            <input style="display: inline-block; width: 15px; vertical-align: top; margin-right: 10px;" type="checkbox" id="complete" name="complete" value="Complete">
+            <label style="display: inline-block; width: 200px; word-break: break-all; " for="complete">Book Complete</label>
+      
+            <div style="text-align: start;">
+                <button style="margin-top: 3.5em;">Update Progress</button>
+            </div>
+            
+        </form>
+
+    </div>
+    <script src="javascript/bookProgress.js"></script>
+</body>
+
+</html>
