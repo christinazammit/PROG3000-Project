@@ -50,5 +50,31 @@ namespace API.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpPut("{id}/currentpage")] // api/update/id/currentpage
+        public async Task<IActionResult> UpdateCurrentPage(string id, Book book)
+        {
+            try
+            {
+                var bookInDb = await _context.Books.FindAsync(new Guid(id));
+
+                if (bookInDb == null) 
+                {
+                    return NotFound();
+                }
+
+                bookInDb.CurrentPage = book.CurrentPage;
+                bookInDb.IsBookComplete = book.IsBookComplete;
+                bookInDb.Comments = book.Comments;
+
+                await _context.SaveChangesAsync();
+                return Ok(bookInDb);
+
+            }
+            catch (System.Exception)
+            {
+                return BadRequest();
+            }
+        }
     }
 }
