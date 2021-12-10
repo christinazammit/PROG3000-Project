@@ -7,8 +7,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Converters;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 using API.Models.Persistence;
+using API.Controllers;
 
 namespace API
 {
@@ -26,6 +30,19 @@ namespace API
         {
             services.AddControllersWithViews();
             services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();
+
+            services.AddMvc()
+                .AddJsonOptions(opts =>
+                {
+                    opts.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    opts.JsonSerializerOptions.IgnoreNullValues = true;
+                });
+
+            services.AddCors(options => {
+                options.AddPolicy("AllowAllPolicy", policy => {
+                    policy.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,17 +56,19 @@ namespace API
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+            app.UseCors("AllowAllPolicy");
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Display}/{action=Index}/{id?}");
+                endpoints.MapControllers();
             });
         }
     }
