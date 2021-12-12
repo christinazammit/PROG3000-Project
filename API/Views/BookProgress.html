@@ -2,6 +2,7 @@
 Author: Christina Zammit 
 -->
 
+<!-- HTML page for displaying update book progress form -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,27 +23,40 @@ Author: Christina Zammit
 <body>
     <div class="container">
         <div id="myDIV" class="header">
+
+            <!-- displays image -->
             <img class="image" src="book.png"/>
+
+            <!-- displays headers -->
             <h2>My Library</h2>
             <h4>Update Book Progress</h4>
+
+            <!-- displays button to navigate back to all books -->
             <button id="allbooks-button" type="button" class="btn btn-link">Library</button>
         </div>
 
+        <!-- creates the form -->
         <form style="display: inline-block;">
             <div style="padding-bottom: 1em;">
+
+                <!-- input for current page -->
                 <label style="padding-top: 2em;" for="currentPage">Current Page:</label><br>
                 <input style="border: 1px solid; margin-bottom: 1em;" type="number" id="currentPage" name="currentPage"><br>
             </div>
 
+            <!-- checkbox to indicate if book is completed or not -->
             <input style="display: inline-block; width: 15px; vertical-align: top; margin-right: 10px;" type="checkbox" id="complete" name="complete" value="Completed">
             <label style="display: inline-block; width: 200px; word-break: break-all; " for="complete">Book Complete</label>
       
             <div style="padding-top: 1em;">
+                <!-- input for comments -->
                 <label for="comment">Comments:</label><br>
                 <input style="border: 1px solid;" type="text" id="comment" name="comment"><br>
             </div>
 
             <div style="text-align: start;">
+
+                <!-- button to update progress and submit form -->
                 <button type="button" id="updateButton" style="margin-top: 3em;">Update Progress</button>
             </div>
             

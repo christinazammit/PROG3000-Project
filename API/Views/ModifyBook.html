@@ -2,6 +2,7 @@
 Author: Christina Zammit 
 -->
 
+<!-- HTML page for displaying update book information form -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,26 +23,38 @@ Author: Christina Zammit
 <body>
     <div class="container">
         <div id="myDIV" class="header">
+
+            <!-- displays image -->
             <img class="image" src="book.png"/>
+
+            <!-- displays headers -->
             <h2>My Library</h2>
             <h4>Update Book Information</h4>
+
+            <!-- displays button to navigate back to all books -->
             <button id="allbooks-button" type="button" class="btn btn-link">Library</button>
         </div>
 
+        <!-- creates the form -->
         <form style="display: inline-block;">
             <div style="padding-bottom: 1em;">
+
+                <!-- input for title -->
                 <label style="padding-top: 2em;" for="title">Title:</label><br>
                 <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="title" name="title"><br>
 
+                <!-- input for first name -->
                 <label for="firstName">Author's First Name:</label><br>
                 <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="firstName" name="firstName"><br>
 
+                <!-- input for last name -->
                 <label for="lastName">Author's Last Name:</label><br>
                 <input style="border: 1px solid; margin-bottom: 1em;" type="text" id="lastName" name="lastName"><br>
             </div>
 
             <p>Book Genre:</p>
 
+            <!-- radio buttons to indicate the books genre -->
             <div style="padding-bottom: 1em;">
                 <input type="radio" id="romance" name="genre" value="Romance">
                 <label for="romance">Romance</label>
@@ -62,10 +75,11 @@ Author: Christina Zammit
                 <label for="horror">Horror</label>
             </div>
 
-
+            <!-- input for comments -->
             <label for="comment">Comments:</label><br>
             <input style="border: 1px solid;" type="text" id="comment" name="comment"><br>
 
+             <!-- button to update information and submit form -->
             <div style="text-align: start;" id="modifyDiv">
                 <button type="button" id="modifyButton" style="margin-top: 2em;">Modify</button> 
             </div> 
