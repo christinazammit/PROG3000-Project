@@ -4,6 +4,31 @@ document.getElementById("allbooks-button").addEventListener("click", (element) =
 
 const id = localStorage.getItem("id");
 
+document.getElementById("title").value = localStorage.getItem("title");
+document.getElementById("firstName").value = localStorage.getItem("firstName");
+document.getElementById("lastName").value = localStorage.getItem("lastName");
+
+if (localStorage.getItem("genre") == "Romance") {
+    document.getElementById("romance").checked = true;
+}
+else if (localStorage.getItem("genre") == "Mystery") {
+    document.getElementById("mystery").checked = true;
+}
+else if (localStorage.getItem("genre") == "Historical") {
+    document.getElementById("historical").checked = true;
+}
+else if (localStorage.getItem("genre") == "NonFiction") {
+    document.getElementById("nonfiction").checked = true;
+}
+else if (localStorage.getItem("genre") == "Fantasy") {
+    document.getElementById("fantasy").checked = true;
+}
+else if (localStorage.getItem("genre") == "Horror") {
+    document.getElementById("horror").checked = true;
+}
+
+document.getElementById("comment").value = localStorage.getItem("comment");
+
 document.getElementById("modifyButton").addEventListener("click", (element) => {
     var updatedTitle = document.getElementById("title");
     var updatedFirstName = document.getElementById("firstName");

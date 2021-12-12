@@ -50,6 +50,11 @@ fetch('http://localhost:5000/api/display/books', {
         nodeUpdate.appendChild(modifyBtn);
         modifyBtn.onclick = function () {
             localStorage.setItem("id", book.id);
+            localStorage.setItem("title", book.title);
+            localStorage.setItem("firstName", book.author.firstName);
+            localStorage.setItem("lastName", book.author.lastName);
+            localStorage.setItem("genre", book.genre);
+            localStorage.setItem("comment", book.comments);
             location.href = "ModifyBook.html";
         }
 
