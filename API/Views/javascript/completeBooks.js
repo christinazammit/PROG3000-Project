@@ -1,3 +1,7 @@
+//
+// Author: Christina Zammit
+//
+
 fetch('http://localhost:5000/api/display/completed', {
     method: "GET",
     headers: {
