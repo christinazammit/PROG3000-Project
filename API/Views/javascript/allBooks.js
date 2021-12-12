@@ -64,6 +64,9 @@ fetch('http://localhost:5000/api/display/books', {
         nodeUpdate.appendChild(progressBtn);
         progressBtn.onclick = function () {
             localStorage.setItem("id", book.id);
+            localStorage.setItem("comment", book.comments);
+            localStorage.setItem("page", book.currentPage);
+            localStorage.setItem("isComplete", book.isBookComplete);
             location.href = "BookProgress.html";
         }
 

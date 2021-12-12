@@ -4,8 +4,21 @@ document.getElementById("allbooks-button").addEventListener("click", (element) =
 
 const id = localStorage.getItem("id");
 
+document.getElementById("currentPage").value = localStorage.getItem("page");
+document.getElementById("comment").value = localStorage.getItem("comment");
+
+console.log(localStorage.getItem("isComplete"));
+
+if (localStorage.getItem("isComplete") == "true") {
+    document.getElementById("complete").checked = true;
+}
+else {
+    document.getElementById("complete").checked = false;
+}
+
 document.getElementById("updateButton").addEventListener("click", (element) => {
     var updatedPage = document.getElementById("currentPage");
+    var updatedComment = document.getElementById("comment");
     var updatedComplete;
 
     if (document.getElementById("complete").checked) {
@@ -22,6 +35,7 @@ document.getElementById("updateButton").addEventListener("click", (element) => {
     },
     body: JSON.stringify({
         currentpage: updatedPage.value,
+        comments: updatedComment.value,
         isbookcomplete: updatedComplete,
     })
 })

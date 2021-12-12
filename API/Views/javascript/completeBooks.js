@@ -50,6 +50,11 @@ fetch('http://localhost:5000/api/display/completed', {
         nodeUpdate.appendChild(modifyBtn);
         modifyBtn.onclick = function () {
             localStorage.setItem("id", book.id);
+            localStorage.setItem("title", book.title);
+            localStorage.setItem("firstName", book.author.firstName);
+            localStorage.setItem("lastName", book.author.lastName);
+            localStorage.setItem("genre", book.genre);
+            localStorage.setItem("comment", book.comments);
             location.href = "ModifyBook.html";
         }
 
@@ -59,6 +64,9 @@ fetch('http://localhost:5000/api/display/completed', {
         nodeUpdate.appendChild(progressBtn);
         progressBtn.onclick = function () {
             localStorage.setItem("id", book.id);
+            localStorage.setItem("comment", book.comments);
+            localStorage.setItem("page", book.currentPage);
+            localStorage.setItem("isComplete", book.isBookComplete);
             location.href = "BookProgress.html";
         }
         

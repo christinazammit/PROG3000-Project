@@ -65,7 +65,7 @@ namespace API.Controllers
 
                 bookInDb.CurrentPage = book.CurrentPage;
                 bookInDb.IsBookComplete = book.IsBookComplete;
-                //bookInDb.Comments = book.Comments;
+                bookInDb.Comments = book.Comments;
 
                 await _context.SaveChangesAsync();
                 return Ok(bookInDb);
