@@ -78,6 +78,7 @@ fetch('http://localhost:5000/api/display/books', {
             localStorage.setItem("lastName", book.author.lastName);
             localStorage.setItem("genre", book.genre);
             localStorage.setItem("comment", book.comments);
+            localStorage.setItem("pages", book.totalPages);
             location.href = "ModifyBook.html";
         }
 

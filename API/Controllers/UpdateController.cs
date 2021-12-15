@@ -55,6 +55,9 @@ namespace API.Controllers
                 // sets the book genre to the genre input by the user
                 bookInDb.Genre = book.Genre;
 
+                // sets the books total pages to the total pages input by the user
+                bookInDb.TotalPages = book.TotalPages;
+
                 // sets the book comment to the comment input by the user
                 bookInDb.Comments = book.Comments;
 

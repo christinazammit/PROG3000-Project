@@ -42,6 +42,9 @@ else if (localStorage.getItem("genre") == "Horror") {
 // sets the comments to the value from local storage
 document.getElementById("comment").value = localStorage.getItem("comment");
 
+// sets the total pages to the value from local storage
+document.getElementById("pages").value = localStorage.getItem("pages");
+
 // creates event listener to the modify button that updates the books information
 document.getElementById("modifyButton").addEventListener("click", (element) => {
    
@@ -78,6 +81,9 @@ document.getElementById("modifyButton").addEventListener("click", (element) => {
     // gets the user input for the comment
     var updatedComment = document.getElementById("comment");
 
+    // gets the user input for the total pages
+    var updatedTotalPages = document.getElementById("pages");
+
     // retreives the url for updating the books information given the book id
     fetch(`http://localhost:5000/api/update/${id}`, {
     method: "PUT",
@@ -85,7 +91,7 @@ document.getElementById("modifyButton").addEventListener("click", (element) => {
         "Content-Type": "application/json"
     },
 
-    // converts updatedTitle, updatedFirstName, updatedLastName, updatedGenre, and updatedComment to JSON to be stored in database
+    // converts updatedTitle, updatedFirstName, updatedLastName, updatedGenre, updatedTotalPages, and updatedComment to JSON to be stored in database
     body: JSON.stringify({
         title: updatedTitle.value,
         author: {
@@ -94,6 +100,7 @@ document.getElementById("modifyButton").addEventListener("click", (element) => {
         },
         genre: updatedGenre.value,
         comments: updatedComment.value,
+        totalpages: updatedTotalPages.value,
     })
 })
     // json response
